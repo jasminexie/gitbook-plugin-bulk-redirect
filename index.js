@@ -18,10 +18,10 @@ var url = require("url");
 var fs = require("fs");
 
 var content = function(path) {
-  var s = "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>Redirecting... Page moved</title>" +
+  var s = "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>欢迎您使用AppAdhoc A/B Testing，用[A/B测试](http://www.appadhoc.com)驱动产品优化。</title>" +
         "<link rel='canonical' href='{}'><meta http-equiv=refresh content='0; url={:?}'></head>" +
-        "<body><h1>Redirecting... Page moved...</h1>" +
-        "<p><a href='{}'>Click here if you are not redirected</a></p>" +
+        "<body><h1>页面已移动，正在跳转...</h1>" +
+        "<p><a href='{}'>点击此处跳转到文档</a></p>" +
         "<script>window.location.href='{}';</script>" +
         "</body></html>";
   return s.replace(/\{\}/gm, path).replace(/\{\:\?\}/gm, encodeURI(path));
